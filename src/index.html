@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Tags -->
+  <title>Aura Estética | Clínica Médica de Estética Premium & Harmonização</title>
+  <link rel="icon" type="image/png" href="assets/logo-icon.png">
+  <meta name="description" content="Descubra a Aura Estética. Tratamentos faciais e corporais premium como Botox, Preenchimento e Bioestimuladores de Colágeno em um ambiente luxuoso e relaxante. Agende online.">
+  <meta name="keywords" content="estética premium, clínica de estética de luxo, botox, preenchimento facial, harmonização facial, bioestimulador de colágeno, rejuvenescimento, aura estética">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aura Estética | Clínica Médica de Estética Premium">
+  <meta property="og:description" content="Tratamentos faciais e corporais premium em um ambiente de luxo. Agende sua consulta em minutos de forma 100% online.">
+  <meta property="og:image" content="assets/hero-clinic.png">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: {
+              DEFAULT: '#FAF7F5',
+              dark: '#F4EFEA',
+            },
+            champagne: '#D4AF37',
+            goldrose: '#C5A880',
+            sage: {
+              DEFAULT: '#6E8A78',
+              dark: '#4A5F52',
+              light: '#E8ECE9',
+            },
+            dark: '#1E1C1B',
+            muted: '#7E7A77',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-sand text-dark font-body antialiased">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-premium py-4">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 group">
+        <span class="font-title text-xl md:text-2xl tracking-wider text-dark transition-colors duration-300 group-hover:text-goldrose">AURA</span>
+        <span class="h-5 w-px bg-goldrose/40"></span>
+        <span class="text-xs tracking-[0.2em] font-light text-muted uppercase">Estética</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm tracking-wide text-dark/80">
+        <a href="#diferenciais" class="hover:text-goldrose transition-colors">Diferenciais</a>
+        <a href="#tratamentos" class="hover:text-goldrose transition-colors">Tratamentos</a>
+        <a href="#equipe" class="hover:text-goldrose transition-colors">Especialistas</a>
+        <a href="#depoimentos" class="hover:text-goldrose transition-colors">Opiniões</a>
+        <a href="#faq" class="hover:text-goldrose transition-colors">FAQ</a>
+      </nav>
+      
+      <!-- Header CTA -->
+      <div class="flex items-center gap-4">
+        <a href="#agendamento" class="cta-agendar-geral hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-white gold-gradient hover:gold-gradient-hover transition-all duration-300 shadow-md hover:shadow-lg">
+          Agendar Consulta
+        </a>
+        
+        <!-- Mobile Menu Trigger -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-dark hover:text-goldrose transition-colors" aria-label="Abrir menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-sand-dark border-b border-goldrose/20 py-6 px-6 flex flex-col gap-4 shadow-lg md:hidden">
+      <a href="#diferenciais" class="mobile-link py-2 text-base font-medium text-dark/80 hover:text-goldrose">Diferenciais</a>
+      <a href="#tratamentos" class="mobile-link py-2 text-base font-medium text-dark/80 hover:text-goldrose">Tratamentos</a>
+      <a href="#equipe" class="mobile-link py-2 text-base font-medium text-dark/80 hover:text-goldrose">Especialistas</a>
+      <a href="#depoimentos" class="mobile-link py-2 text-base font-medium text-dark/80 hover:text-goldrose">Opiniões</a>
+      <a href="#faq" class="mobile-link py-2 text-base font-medium text-dark/80 hover:text-goldrose">FAQ</a>
+      <a href="#agendamento" class="mobile-link cta-agendar-geral flex items-center justify-center w-full py-3 rounded-full text-sm font-semibold uppercase tracking-wider text-white gold-gradient">
+        Agendar Consulta
+      </a>
+    </div>
+  </header>
+
+  <main class="pt-24 overflow-x-hidden">
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center py-16 px-6 bg-gradient-to-b from-sand via-sand to-sand-dark">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+        <!-- Hero Content -->
+        <div class="lg:col-span-6 flex flex-col items-start text-left z-10">
+          <div class="hero-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage-light text-sage font-medium text-xs tracking-wider uppercase mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            Estética Médica Integrativa e Premium
+          </div>
+          
+          <h1 class="hero-title font-title text-4xl md:text-5xl lg:text-6xl text-dark leading-tight mb-6">
+            Realce sua <br class="hidden md:inline"><span class="gold-text-gradient font-semibold">beleza natural</span>,<br>celebre sua essência.
+          </h1>
+          
+          <p class="hero-subtitle text-base md:text-lg text-muted font-light mb-8 max-w-xl leading-relaxed">
+            Tratamentos estéticos faciais e corporais personalizados de alta performance, projetados para valorizar suas características únicas e proporcionar um bem-estar profundo.
+          </p>
+          
+          <div class="hero-actions flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#agendamento" class="cta-agendar-geral flex items-center justify-center px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider text-white gold-gradient hover:gold-gradient-hover transition-all duration-300 shadow-lg hover:shadow-xl group">
+              Agendar Avaliação
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+            </a>
+            <a href="#tratamentos" class="flex items-center justify-center px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-wider text-dark/80 bg-white border border-goldrose/30 hover:bg-sand-dark hover:text-dark transition-all duration-300">
+              Conhecer Tratamentos
+            </a>
+          </div>
+          
+          <!-- Stats -->
+          <div class="hero-stats grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-goldrose/20 w-full max-w-md">
+            <div>
+              <span class="block font-title text-2xl font-bold text-sage">5k+</span>
+              <span class="text-xs text-muted">Pacientes Satisfeitos</span>
+            </div>
+            <div>
+              <span class="block font-title text-2xl font-bold text-sage">100%</span>
+              <span class="text-xs text-muted">Resultados Naturais</span>
+            </div>
+            <div>
+              <span class="block font-title text-2xl font-bold text-sage">10+</span>
+              <span class="text-xs text-muted font-light">Anos de Experiência</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Media -->
+        <div class="lg:col-span-6 flex justify-center relative">
+          <div class="hero-image-wrapper relative w-full max-w-md md:max-w-lg aspect-[4/5] rounded-[2rem] overflow-hidden gold-shadow border border-goldrose/20">
+            <img src="assets/hero-clinic.png" alt="Interior luxuoso da Clínica Aura Estética com poltrona confortável e iluminação sálvia relaxante" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000">
+            <!-- Glass Overlay Card -->
+            <div class="absolute bottom-6 left-6 right-6 glass-premium rounded-2xl p-6 border border-white/20 shadow-lg">
+              <div class="flex items-center gap-4">
+                <div class="w-10 h-10 rounded-full bg-sage flex items-center justify-center text-white">
+                  <i data-lucide="award" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h4 class="font-title text-sm font-bold text-dark">Clínica Referência</h4>
+                  <p class="text-xs text-muted">Ambiente seguro com selo de excelência e biossegurança.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS SECTION -->
+    <section id="diferenciais" class="py-20 px-6 bg-white reveal-item">
+      <div class="max-w-7xl mx-auto text-center">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3">A Experiência Aura</span>
+        <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">Por que escolher nossa clínica?</h2>
+        <div class="w-12 h-0.5 bg-goldrose mx-auto mb-16"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Diferencial 1 -->
+          <div class="reveal-item flex flex-col items-center p-8 bg-sand/40 border border-goldrose/15 rounded-3xl hover-lift gold-border-glow">
+            <div class="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center text-sage mb-6">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-title text-lg font-bold text-dark mb-3">Ciência & Segurança</h3>
+            <p class="text-sm text-muted leading-relaxed font-light">
+              Nossos procedimentos utilizam produtos de marcas globais renomadas e são realizados por especialistas certificados que priorizam a saúde e a integridade de sua pele.
+            </p>
+          </div>
+          
+          <!-- Diferencial 2 -->
+          <div class="reveal-item flex flex-col items-center p-8 bg-sand/40 border border-goldrose/15 rounded-3xl hover-lift gold-border-glow">
+            <div class="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center text-sage mb-6">
+              <i data-lucide="flower" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-title text-lg font-bold text-dark mb-3">Ambiente Sensorial</h3>
+            <p class="text-sm text-muted leading-relaxed font-light">
+              Desfrute de cabines climatizadas individuais, música ambiente suave e fragrâncias relaxantes formuladas para transformar o tratamento estético em uma sessão de bem-estar.
+            </p>
+          </div>
+          
+          <!-- Diferencial 3 -->
+          <div class="reveal-item flex flex-col items-center p-8 bg-sand/40 border border-goldrose/15 rounded-3xl hover-lift gold-border-glow">
+            <div class="w-14 h-14 rounded-full bg-sage-light flex items-center justify-center text-sage mb-6">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-title text-lg font-bold text-dark mb-3">Tecnologia Avançada</h3>
+            <p class="text-sm text-muted leading-relaxed font-light">
+              Mapeamento facial digital 3D e as tecnologias mais recentes do mercado de rejuvenescimento facial não cirúrgico ao seu alcance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRATAMENTOS SECTION -->
+    <section id="tratamentos" class="py-20 px-6 bg-sand-dark/30 reveal-item">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3 font-body">Nossos Serviços</span>
+          <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">Tratamentos Exclusivos</h2>
+          <div class="w-12 h-0.5 bg-goldrose mx-auto mb-6"></div>
+          <p class="text-sm text-muted max-w-xl mx-auto font-light">
+            Portfólio selecionado de procedimentos estéticos minimamente invasivos com foco em rejuvenescimento natural e saúde cutânea.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card Botox -->
+          <div class="reveal-item bg-white border border-goldrose/15 rounded-3xl overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-sand-dark relative">
+                <img src="assets/treatment-botox.png" alt="Aplicação delicada de toxina botulínica para rejuvenescimento facial" class="w-full h-full object-cover">
+                <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-sage text-xs font-semibold px-3 py-1 rounded-full">Popular</span>
+              </div>
+              <div class="p-6">
+                <h3 class="font-title text-lg font-bold text-dark mb-2">Botox Full Face</h3>
+                <p class="text-xs text-muted mb-4 font-light flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 30 min | <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Durabilidade: 4-6 meses
+                </p>
+                <p class="text-sm text-muted font-light leading-relaxed">
+                  Tratamento preventivo e corretivo de rugas de expressão na testa, glabela e lateral dos olhos para uma aparência descansada.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-sand-dark mt-4 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-muted block">A partir de</span>
+                <span class="font-title text-lg font-bold text-sage">R$ 1.600</span>
+              </div>
+              <button data-tratamento="botox" class="cta-agendar-tratamento p-3 rounded-full bg-sage-light text-sage hover:bg-sage hover:text-white transition-all shadow-sm">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Card Preenchimento -->
+          <div class="reveal-item bg-white border border-goldrose/15 rounded-3xl overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-sand-dark">
+                <img src="assets/treatment-fillers.png" alt="Procedimento estético de preenchimento labial com ácido hialurônico" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="font-title text-lg font-bold text-dark mb-2">Preenchimento Labial</h3>
+                <p class="text-xs text-muted mb-4 font-light flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 45 min | <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Ácido Hialurônico 1ml
+                </p>
+                <p class="text-sm text-muted font-light leading-relaxed">
+                  Volumização sutil, definição de contorno e hidratação profunda dos lábios com ácido hialurônico de alta maleabilidade.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-sand-dark mt-4 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-muted block">A partir de</span>
+                <span class="font-title text-lg font-bold text-sage">R$ 1.800</span>
+              </div>
+              <button data-tratamento="preenchimento" class="cta-agendar-tratamento p-3 rounded-full bg-sage-light text-sage hover:bg-sage hover:text-white transition-all shadow-sm">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Card Bioestimulador -->
+          <div class="reveal-item bg-white border border-goldrose/15 rounded-3xl overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-sand-dark">
+                <img src="assets/treatment-collagen.png" alt="Tratamento clínico com bioestimulador de colágeno" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="font-title text-lg font-bold text-dark mb-2">Bioestimulador</h3>
+                <p class="text-xs text-muted mb-4 font-light flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 40 min | <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Sculptra / Radiesse
+                </p>
+                <p class="text-sm text-muted font-light leading-relaxed">
+                  Estimulação biológica da produção de colágeno pelo próprio corpo para combater a flacidez facial e restaurar a firmeza.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-sand-dark mt-4 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-muted block">A partir de</span>
+                <span class="font-title text-lg font-bold text-sage">R$ 2.400</span>
+              </div>
+              <button data-tratamento="bioestimulador" class="cta-agendar-tratamento p-3 rounded-full bg-sage-light text-sage hover:bg-sage hover:text-white transition-all shadow-sm">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Card Limpeza de Pele -->
+          <div class="reveal-item bg-white border border-goldrose/15 rounded-3xl overflow-hidden hover-lift shadow-sm flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video w-full overflow-hidden bg-sand-dark">
+                <img src="assets/treatment-facial.png" alt="Profissional aplicando máscara relaxante de argila e LED durante limpeza de pele" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <h3 class="font-title text-lg font-bold text-dark mb-2">Limpeza de Pele</h3>
+                <p class="text-xs text-muted mb-4 font-light flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3.5 h-3.5"></i> 90 min | <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Protocolo Sensorial
+                </p>
+                <p class="text-sm text-muted font-light leading-relaxed">
+                  Extração profunda combinada com peeling físico ultrassônico e fototerapia LED para purificar e iluminar a pele.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 border-t border-sand-dark mt-4 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-muted block">Valor Fixo</span>
+                <span class="font-title text-lg font-bold text-sage">R$ 380</span>
+              </div>
+              <button data-tratamento="limpeza" class="cta-agendar-tratamento p-3 rounded-full bg-sage-light text-sage hover:bg-sage hover:text-white transition-all shadow-sm">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO EQUIPE CLÍNICA -->
+    <section id="equipe" class="py-20 px-6 bg-white reveal-item">
+      <div class="max-w-7xl mx-auto text-center">
+        <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3 font-body">Corpo Clínico</span>
+        <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">Nossos Especialistas</h2>
+        <div class="w-12 h-0.5 bg-goldrose mx-auto mb-16"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <!-- Profissional 1: Dra. Helena -->
+          <div class="reveal-item flex flex-col sm:flex-row items-center gap-6 p-8 bg-sand/40 border border-goldrose/15 rounded-3xl text-left hover-lift gold-border-glow">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-goldrose/35 shadow-md shrink-0">
+              <img src="assets/professional-helena.png" alt="Dra. Helena Vasconcelos" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-[10px] font-semibold text-goldrose uppercase tracking-wider block mb-1">Dermatologista & RT</span>
+              <h3 class="font-title text-lg font-bold text-dark mb-2">Dra. Helena Vasconcelos</h3>
+              <p class="text-xs text-muted leading-relaxed font-light mb-4">
+                CRM-RJ 123456 | Especialista em cosmiatria avançada, rejuvenescimento facial não cirúrgico e harmonização elegante com mais de 10 anos de prática clínica.
+              </p>
+              <a href="#agendamento" class="cta-agendar-geral text-xs font-semibold uppercase tracking-wider text-sage hover:text-sage-dark flex items-center gap-1">
+                Agendar com Dra. Helena <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Profissional 2: Dr. Thiago -->
+          <div class="reveal-item flex flex-col sm:flex-row items-center gap-6 p-8 bg-sand/40 border border-goldrose/15 rounded-3xl text-left hover-lift gold-border-glow">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden border-2 border-goldrose/35 shadow-md shrink-0">
+              <img src="assets/professional-thiago.png" alt="Dr. Thiago Mendes" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <span class="text-[10px] font-semibold text-goldrose uppercase tracking-wider block mb-1">Biomédico Esteta</span>
+              <h3 class="font-title text-lg font-bold text-dark mb-2">Dr. Thiago Mendes</h3>
+              <p class="text-xs text-muted leading-relaxed font-light mb-4">
+                CRBM-RJ 78910 | Especialista em anatomia facial injetável e bioestimuladores de colágeno, focado na restauração volumétrica natural e rejuvenescimento preventivo.
+              </p>
+              <a href="#agendamento" class="cta-agendar-geral text-xs font-semibold uppercase tracking-wider text-sage hover:text-sage-dark flex items-center gap-1">
+                Agendar com Dr. Thiago <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIDGET DE AGENDAMENTO (WIDGET INTERATIVO) -->
+    <section id="agendamento" class="py-20 px-6 bg-white reveal-item">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3">Conveniência</span>
+          <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">Agendamento Online</h2>
+          <div class="w-12 h-0.5 bg-goldrose mx-auto mb-6"></div>
+          <p class="text-sm text-muted max-w-lg mx-auto font-light">
+            Reserve sua consulta de avaliação em menos de 2 minutos. Escolha o serviço, profissional e horário preferido.
+          </p>
+        </div>
+
+        <!-- Widget Box -->
+        <div class="bg-sand rounded-[2rem] border border-goldrose/25 overflow-hidden shadow-xl relative min-h-[500px]">
+          
+          <!-- Progress Header -->
+          <div class="border-b border-goldrose/15 px-6 md:px-12 py-6 bg-sand-dark/40 flex items-center justify-between">
+            <div class="flex items-center gap-2 md:gap-4 w-full justify-between max-w-md mx-auto">
+              <!-- Step 1 -->
+              <div class="flex items-center gap-1.5 md:gap-2">
+                <div class="step-dot w-6 h-6 rounded-full border border-muted/50 text-xs font-semibold flex items-center justify-center transition-all duration-300 active text-dark" data-step="1">1</div>
+                <span class="text-[10px] md:text-xs text-muted hidden sm:inline">Serviço</span>
+              </div>
+              <!-- Line 1-2 -->
+              <div class="flex-1 h-0.5 bg-muted/20 relative mx-1 md:mx-3">
+                <div class="step-line-fill absolute left-0 top-0 h-full bg-sage w-0 transition-all duration-300"></div>
+              </div>
+              <!-- Step 2 -->
+              <div class="flex items-center gap-1.5 md:gap-2">
+                <div class="step-dot w-6 h-6 rounded-full border border-muted/50 text-xs font-semibold flex items-center justify-center transition-all duration-300 text-dark" data-step="2">2</div>
+                <span class="text-[10px] md:text-xs text-muted hidden sm:inline">Data & Horário</span>
+              </div>
+              <!-- Line 2-3 -->
+              <div class="flex-1 h-0.5 bg-muted/20 relative mx-1 md:mx-3">
+                <div class="step-line-fill absolute left-0 top-0 h-full bg-sage w-0 transition-all duration-300"></div>
+              </div>
+              <!-- Step 3 -->
+              <div class="flex items-center gap-1.5 md:gap-2">
+                <div class="step-dot w-6 h-6 rounded-full border border-muted/50 text-xs font-semibold flex items-center justify-center transition-all duration-300 text-dark" data-step="3">3</div>
+                <span class="text-[10px] md:text-xs text-muted hidden sm:inline">Dados</span>
+              </div>
+              <!-- Line 3-4 -->
+              <div class="flex-1 h-0.5 bg-muted/20 relative mx-1 md:mx-3">
+                <div class="step-line-fill absolute left-0 top-0 h-full bg-sage w-0 transition-all duration-300"></div>
+              </div>
+              <!-- Step 4 -->
+              <div class="flex items-center gap-1.5 md:gap-2">
+                <div class="step-dot w-6 h-6 rounded-full border border-muted/50 text-xs font-semibold flex items-center justify-center transition-all duration-300 text-dark" data-step="4">4</div>
+                <span class="text-[10px] md:text-xs text-muted hidden sm:inline">Confirmação</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- PASSO 1: SELEÇÃO DE TRATAMENTO -->
+          <div class="step-container active px-6 md:px-12 py-8" data-step="1">
+            <h3 class="font-title text-lg font-bold text-dark mb-6 text-center">Selecione o Tratamento Desejado</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+              <button type="button" data-value="botox" class="booking-treatment-card flex items-center justify-between p-5 bg-white border border-goldrose/20 rounded-2xl text-left transition-all hover:border-sage hover:bg-sage-light/20 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-sand-dark flex items-center justify-center text-sage">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="block text-sm font-semibold text-dark">Botox Full Face</span>
+                    <span class="text-xs text-muted">A partir de R$ 1.600</span>
+                  </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-muted/60 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+
+              <button type="button" data-value="preenchimento" class="booking-treatment-card flex items-center justify-between p-5 bg-white border border-goldrose/20 rounded-2xl text-left transition-all hover:border-sage hover:bg-sage-light/20 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-sand-dark flex items-center justify-center text-sage">
+                    <i data-lucide="smile" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="block text-sm font-semibold text-dark">Preenchimento Labial</span>
+                    <span class="text-xs text-muted">A partir de R$ 1.800</span>
+                  </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-muted/60 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+
+              <button type="button" data-value="bioestimulador" class="booking-treatment-card flex items-center justify-between p-5 bg-white border border-goldrose/20 rounded-2xl text-left transition-all hover:border-sage hover:bg-sage-light/20 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-sand-dark flex items-center justify-center text-sage">
+                    <i data-lucide="activity" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="block text-sm font-semibold text-dark">Bioestimulador de Colágeno</span>
+                    <span class="text-xs text-muted">A partir de R$ 2.400</span>
+                  </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-muted/60 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+
+              <button type="button" data-value="limpeza" class="booking-treatment-card flex items-center justify-between p-5 bg-white border border-goldrose/20 rounded-2xl text-left transition-all hover:border-sage hover:bg-sage-light/20 group">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-sand-dark flex items-center justify-center text-sage">
+                    <i data-lucide="droplet" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="block text-sm font-semibold text-dark">Limpeza de Pele</span>
+                    <span class="text-xs text-muted">Valor Fixo: R$ 380</span>
+                  </div>
+                </div>
+                <i data-lucide="chevron-right" class="w-4 h-4 text-muted/60 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+
+            <!-- Footer Action -->
+            <div class="mt-8 flex justify-center">
+              <button id="next-step-1" class="px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-white gold-gradient disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                Avançar para Data
+              </button>
+            </div>
+          </div>
+
+          <!-- PASSO 2: SELEÇÃO DE PROFISSIONAL E DATA/HORA -->
+          <div class="step-container px-6 md:px-12 py-8" data-step="2">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <!-- Lado Esquerdo: Profissional -->
+              <div class="lg:col-span-5 flex flex-col gap-6">
+                <div>
+                  <h4 class="font-title text-sm font-bold text-dark mb-4">1. Escolha o Profissional</h4>
+                  <div class="flex flex-col gap-3">
+                    <button type="button" data-value="helena" class="booking-professional-card p-4 bg-white border border-goldrose/25 rounded-2xl flex items-center gap-3 text-left transition-all hover:border-sage">
+                      <div class="w-10 h-10 rounded-full overflow-hidden bg-sand-dark">
+                        <img src="assets/professional-helena.png" alt="Dra. Helena Vasconcelos" class="w-full h-full object-cover">
+                      </div>
+                      <div>
+                        <span class="block text-xs font-bold text-dark">Dra. Helena Vasconcelos</span>
+                        <span class="text-[10px] text-muted">Dermatologista e Esteta</span>
+                      </div>
+                    </button>
+                    
+                    <button type="button" data-value="thiago" class="booking-professional-card p-4 bg-white border border-goldrose/25 rounded-2xl flex items-center gap-3 text-left transition-all hover:border-sage">
+                      <div class="w-10 h-10 rounded-full overflow-hidden bg-sand-dark">
+                        <img src="assets/professional-thiago.png" alt="Dr. Thiago Mendes" class="w-full h-full object-cover">
+                      </div>
+                      <div>
+                        <span class="block text-xs font-bold text-dark">Dr. Thiago Mendes</span>
+                        <span class="text-[10px] text-muted">Biomédico Esteta</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Horários Disponíveis -->
+                <div>
+                  <h4 class="font-title text-sm font-bold text-dark mb-4">3. Escolha o Horário</h4>
+                  <div class="grid grid-cols-4 gap-2">
+                    <button type="button" data-value="09:00" class="time-slot py-2 text-xs font-semibold rounded-lg border border-goldrose/20 bg-white transition-all">09:00</button>
+                    <button type="button" data-value="10:30" class="time-slot py-2 text-xs font-semibold rounded-lg border border-goldrose/20 bg-white transition-all">10:30</button>
+                    <button type="button" data-value="14:00" class="time-slot py-2 text-xs font-semibold rounded-lg border border-goldrose/20 bg-white transition-all">14:00</button>
+                    <button type="button" data-value="16:30" class="time-slot py-2 text-xs font-semibold rounded-lg border border-goldrose/20 bg-white transition-all">16:30</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Lado Direito: Calendário -->
+              <div class="lg:col-span-7">
+                <h4 class="font-title text-sm font-bold text-dark mb-4">2. Escolha a Data</h4>
+                <div class="p-4 bg-white rounded-2xl border border-goldrose/20 shadow-sm">
+                  <!-- Mes/Ano Header -->
+                  <div class="flex justify-between items-center mb-4">
+                    <button type="button" id="prev-month" class="p-1 rounded-full hover:bg-sand-dark text-dark transition-colors">
+                      <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                    </button>
+                    <span class="calendar-month-year font-title text-xs font-bold text-dark tracking-wide uppercase">Junho de 2026</span>
+                    <button type="button" id="next-month" class="p-1 rounded-full hover:bg-sand-dark text-dark transition-colors">
+                      <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                    </button>
+                  </div>
+                  <!-- Grid -->
+                  <div class="calendar-grid grid grid-cols-7 gap-1 text-center">
+                    <!-- Gerado dinamicamente no JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Action -->
+            <div class="mt-8 flex justify-between">
+              <button class="btn-prev-step flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-medium text-muted hover:text-dark transition-colors" data-goto="1">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar
+              </button>
+              <button id="next-step-2" class="px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-white gold-gradient disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                Confirmar Data e Avançar
+              </button>
+            </div>
+          </div>
+
+          <!-- PASSO 3: DADOS DE CONTATO -->
+          <div class="step-container px-6 md:px-12 py-8" data-step="3">
+            <h3 class="font-title text-lg font-bold text-dark mb-6 text-center">Insira seus dados para finalizar</h3>
+            
+            <form id="booking-form-step3" class="max-w-md mx-auto flex flex-col gap-5">
+              <div>
+                <label for="client-name" class="block text-xs font-semibold text-dark uppercase tracking-wider mb-2">Nome Completo</label>
+                <input type="text" id="client-name" name="name" placeholder="Ex: Mariana Albuquerque" class="input-premium" required>
+              </div>
+
+              <div>
+                <label for="client-email" class="block text-xs font-semibold text-dark uppercase tracking-wider mb-2">E-mail</label>
+                <input type="email" id="client-email" name="email" placeholder="Ex: mariana@exemplo.com" class="input-premium" required>
+              </div>
+
+              <div>
+                <label for="client-phone" class="block text-xs font-semibold text-dark uppercase tracking-wider mb-2">Celular / WhatsApp</label>
+                <input type="tel" id="client-phone" name="phone" placeholder="Ex: (11) 99999-9999" class="input-premium" required>
+              </div>
+            </form>
+
+            <!-- Footer Action -->
+            <div class="mt-8 flex justify-between">
+              <button class="btn-prev-step flex items-center gap-1.5 px-6 py-2.5 rounded-full text-xs font-medium text-muted hover:text-dark transition-colors" data-goto="2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar
+              </button>
+              <button id="next-step-3" class="px-8 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-white gold-gradient disabled:opacity-40 disabled:cursor-not-allowed" disabled>
+                Concluir Agendamento
+              </button>
+            </div>
+          </div>
+
+          <!-- PASSO 4: CONFIRMAÇÃO DO AGENDAMENTO -->
+          <div class="step-container px-6 md:px-12 py-10" data-step="4">
+            <div class="max-w-md mx-auto text-center">
+              <div class="w-16 h-16 rounded-full bg-sage/10 text-sage mx-auto flex items-center justify-center mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+              </div>
+              
+              <h3 class="font-title text-xl font-bold text-dark mb-2">Consulta Pré-Agendada!</h3>
+              <p class="text-xs text-muted mb-8 leading-relaxed font-light">
+                Entraremos em contato via WhatsApp nas próximas 2 horas para confirmar e validar a sua consulta de avaliação personalizada.
+              </p>
+
+              <!-- Resumo Box -->
+              <div class="p-6 bg-white border border-goldrose/20 rounded-2xl text-left shadow-sm flex flex-col gap-4 text-xs">
+                <h4 class="font-title text-xs font-bold text-dark uppercase tracking-wide border-b border-sand-dark pb-2 mb-1 text-center">Resumo da Reserva</h4>
+                
+                <div class="flex justify-between">
+                  <span class="text-muted font-medium">Procedimento:</span>
+                  <span id="summary-treatment" class="font-semibold text-dark">Carregando...</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-muted font-medium">Profissional:</span>
+                  <span id="summary-professional" class="font-semibold text-dark">Carregando...</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-muted font-medium">Data e Hora:</span>
+                  <span id="summary-datetime" class="font-semibold text-dark">Carregando...</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-muted font-medium">Paciente:</span>
+                  <span id="summary-client" class="font-semibold text-dark">Carregando...</span>
+                </div>
+              </div>
+
+              <!-- Nova Reserva Button -->
+              <button id="btn-reset-booking" class="mt-8 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-sage border border-sage/40 hover:bg-sage/10 transition-colors">
+                Novo Agendamento
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL SECTION -->
+    <section id="depoimentos" class="py-20 px-6 bg-sand-dark/20 reveal-item">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3">Opiniões de quem confia</span>
+          <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">A Opinião dos Clientes</h2>
+          <div class="w-12 h-0.5 bg-goldrose mx-auto mb-6"></div>
+          <p class="text-sm text-muted max-w-xl mx-auto font-light">
+            A satisfação e autoestima de nossos clientes são os nossos pilares. Veja alguns depoimentos de quem vivenciou a Experiência Aura.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Depoimento 1 -->
+          <div class="reveal-item p-8 bg-white border border-goldrose/15 rounded-3xl shadow-sm hover-lift flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-goldrose mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-muted leading-relaxed font-light mb-6 italic">
+                "Procurei a clínica Aura para aplicação de Botox e fiquei encantada com a delicadeza dos profissionais. O resultado ficou incrivelmente natural, sem aquele aspecto engessado. O atendimento inicial e o café gourmet também merecem 5 estrelas!"
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-sand-dark pt-4">
+              <div class="w-10 h-10 rounded-full overflow-hidden bg-sand-dark">
+                <img src="assets/avatar-client-1.png" alt="Foto de Mariana Albuquerque" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-dark">Mariana Albuquerque</span>
+                <span class="text-[10px] text-muted">Advogada, 38 anos</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Depoimento 2 -->
+          <div class="reveal-item p-8 bg-white border border-goldrose/15 rounded-3xl shadow-sm hover-lift flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-goldrose mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-muted leading-relaxed font-light mb-6 italic">
+                "Fiz preenchimento labial com a Dra. Helena e ela superou minhas expectativas. Ela escutou exatamente o que eu desejava e me deu um contorno de lábio maravilhoso e extremamente harmonioso. A clínica é linda e transmite muita calma."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-sand-dark pt-4">
+              <div class="w-10 h-10 rounded-full overflow-hidden bg-sand-dark">
+                <img src="assets/avatar-client-2.png" alt="Foto de Carolina Mota" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-dark">Carolina Mota</span>
+                <span class="text-[10px] text-muted">Designer de Interiores, 31 anos</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Depoimento 3 -->
+          <div class="reveal-item p-8 bg-white border border-goldrose/15 rounded-3xl shadow-sm hover-lift flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-goldrose mb-4">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="text-sm text-muted leading-relaxed font-light mb-6 italic">
+                "Fiquei surpreso com o profissionalismo de toda a equipe Aura. Sou bastante vaidoso e fiz o bioestimulador de colágeno na face. As sessões foram pontuais, explicadas detalhadamente e o pós-tratamento é acompanhado de perto pela equipe médica."
+              </p>
+            </div>
+            <div class="flex items-center gap-3 border-t border-sand-dark pt-4">
+              <div class="w-10 h-10 rounded-full overflow-hidden bg-sand-dark">
+                <img src="assets/avatar-client-3.png" alt="Foto de Rodrigo Silveira" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="block text-xs font-bold text-dark">Rodrigo Silveira</span>
+                <span class="text-[10px] text-muted">Empresário, 44 anos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCORDIONS) -->
+    <section id="faq" class="py-20 px-6 bg-white reveal-item">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-goldrose block mb-3">Esclareça suas dúvidas</span>
+          <h2 class="font-title text-3xl md:text-4xl text-dark mb-6">Perguntas Frequentes</h2>
+          <div class="w-12 h-0.5 bg-goldrose mx-auto mb-6"></div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <!-- FAQ 1 -->
+          <div class="border border-goldrose/20 rounded-2xl overflow-hidden bg-sand/30">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left text-sm md:text-base font-semibold text-dark hover:text-goldrose transition-colors" aria-expanded="false" aria-controls="faq-content-1">
+              <span>Os procedimentos estéticos faciais são dolorosos?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-muted transition-transform duration-300"></i>
+            </button>
+            <div id="faq-content-1" class="faq-content">
+              <div class="px-5 pb-5 text-xs md:text-sm text-muted font-light leading-relaxed">
+                Nossos procedimentos médicos estéticos são extremamente confortáveis. Utilizamos anestésicos tópicos importados de alta potência e anestesias injetáveis locais (quando necessário) para zerar ou minimizar consideravelmente qualquer desconforto térmico ou mecânico.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="border border-goldrose/20 rounded-2xl overflow-hidden bg-sand/30">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left text-sm md:text-base font-semibold text-dark hover:text-goldrose transition-colors" aria-expanded="false" aria-controls="faq-content-2">
+              <span>Qual a qualificação dos profissionais da Aura Estética?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-muted transition-transform duration-300"></i>
+            </button>
+            <div id="faq-content-2" class="faq-content">
+              <div class="px-5 pb-5 text-xs md:text-sm text-muted font-light leading-relaxed">
+                Toda a nossa equipe médica e injetora é pós-graduada e especializada em Dermatologia, Cirurgia Plástica ou Biomedicina Estética. Nossos profissionais realizam treinamentos semestrais obrigatórios com anatomistas de referência global para garantir o máximo em segurança e naturalidade.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="border border-goldrose/20 rounded-2xl overflow-hidden bg-sand/30">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left text-sm md:text-base font-semibold text-dark hover:text-goldrose transition-colors" aria-expanded="false" aria-controls="faq-content-3">
+              <span>Quanto tempo duram os resultados do Botox e Preenchedores?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-muted transition-transform duration-300"></i>
+            </button>
+            <div id="faq-content-3" class="faq-content">
+              <div class="px-5 pb-5 text-xs md:text-sm text-muted font-light leading-relaxed">
+                A Toxina Botulínica (Botox) apresenta resultados com durabilidade média de 4 a 6 meses, variando de acordo com o metabolismo e força muscular do paciente. Os preenchedores de ácido hialurônico costumam durar de 10 a 18 meses, dependendo da densidade do produto e área de aplicação.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="border border-goldrose/20 rounded-2xl overflow-hidden bg-sand/30">
+            <button class="faq-trigger w-full flex items-center justify-between p-5 text-left text-sm md:text-base font-semibold text-dark hover:text-goldrose transition-colors" aria-expanded="false" aria-controls="faq-content-4">
+              <span>Como funciona a consulta de avaliação inicial?</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-muted transition-transform duration-300"></i>
+            </button>
+            <div id="faq-content-4" class="faq-content">
+              <div class="px-5 pb-5 text-xs md:text-sm text-muted font-light leading-relaxed">
+                Na consulta de avaliação, realizamos uma análise tridimensional de pele, analisamos o tônus muscular facial e conversamos sobre as queixas prioritárias. Juntos, montamos um cronograma individual de tratamento (*Gerenciamento de Envelhecimento*) baseado nos seus desejos de resultado e tempo disponível.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-sand-dark py-16 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#C5A880_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
+      <!-- Col 1: Logo e Info -->
+      <div class="flex flex-col gap-4">
+        <a href="#hero" class="flex items-center gap-2">
+          <span class="font-title text-xl tracking-wider text-white">AURA</span>
+          <span class="h-4 w-px bg-goldrose/40"></span>
+          <span class="text-[10px] tracking-[0.2em] font-light text-muted uppercase">Estética</span>
+        </a>
+        <p class="text-xs text-muted leading-relaxed font-light mt-2 max-w-xs">
+          Redefinindo o autocuidado por meio da harmonia, ciência médica e requinte estético.
+        </p>
+      </div>
+
+      <!-- Col 2: Tratamentos rápidos -->
+      <div>
+        <h4 class="font-title text-xs font-bold text-white uppercase tracking-wider mb-5">Serviços principais</h4>
+        <ul class="flex flex-col gap-3 text-xs text-muted font-light">
+          <li><a href="#tratamentos" class="hover:text-goldrose transition-colors">Toxina Botulínica</a></li>
+          <li><a href="#tratamentos" class="hover:text-goldrose transition-colors">Preenchimento Labial</a></li>
+          <li><a href="#tratamentos" class="hover:text-goldrose transition-colors">Bioestimuladores de Colágeno</a></li>
+          <li><a href="#tratamentos" class="hover:text-goldrose transition-colors">Protocolos de Limpeza Facial</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Funcionamento -->
+      <div>
+        <h4 class="font-title text-xs font-bold text-white uppercase tracking-wider mb-5">Atendimento</h4>
+        <ul class="flex flex-col gap-3 text-xs text-muted font-light">
+          <li class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-goldrose"></i> Seg a Sex: 09:00 às 19:00</li>
+          <li class="flex items-center gap-2"><i data-lucide="clock" class="w-3.5 h-3.5 text-goldrose"></i> Sábado: 09:00 às 14:00</li>
+          <li class="flex items-center gap-2"><i data-lucide="shield" class="w-3.5 h-3.5 text-goldrose"></i> Atendimento com hora marcada</li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contatos e Social -->
+      <div>
+        <h4 class="font-title text-xs font-bold text-white uppercase tracking-wider mb-5">Contato</h4>
+        <ul class="flex flex-col gap-3 text-xs text-muted font-light">
+          <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-goldrose"></i> Av. das Américas, 4200 - Barra da Tijuca, RJ</li>
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-3.5 h-3.5 text-goldrose"></i> (21) 98888-7777</li>
+          <li class="flex items-center gap-2"><i data-lucide="mail" class="w-3.5 h-3.5 text-goldrose"></i> contato@auraestetica.com.br</li>
+        </ul>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-4 mt-6">
+          <a href="#" class="p-2 rounded-full bg-white/5 text-muted hover:bg-white/10 hover:text-goldrose transition-all" aria-label="Instagram">
+            <i data-lucide="instagram" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full bg-white/5 text-muted hover:bg-white/10 hover:text-goldrose transition-all" aria-label="WhatsApp">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+          </a>
+          <a href="#" class="p-2 rounded-full bg-white/5 text-muted hover:bg-white/10 hover:text-goldrose transition-all" aria-label="Facebook">
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-muted font-light gap-4 relative z-10">
+      <span>&copy; 2026 Aura Estética. Todos os direitos reservados. Responsável Técnico: Dra. Helena Vasconcelos CRM-RJ 123456.</span>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-goldrose transition-colors">Termos de Uso</a>
+        <a href="#" class="hover:text-goldrose transition-colors">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- GSAP Animation Libraries CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Custom Logic JS -->
+  <script src="script.js"></script>
+  
+  <!-- Mobile Menu Logic Inline for instant click action -->
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
+

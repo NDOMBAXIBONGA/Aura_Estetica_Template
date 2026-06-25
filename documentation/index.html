@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Estética | Documentação do Template</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Cinzel', serif;
+    }
+    .code-block {
+      background-color: #1E1C1B;
+      color: #F4EFEA;
+      font-family: monospace;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F5] text-[#1E1C1B] antialiased">
+
+  <!-- Header -->
+  <header class="border-b border-[#C5A880]/20 bg-white/80 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-xl tracking-wider">AURA</span>
+        <span class="h-5 w-px bg-[#C5A880]/40"></span>
+        <span class="text-xs tracking-[0.2em] font-light text-[#7E7A77] uppercase">Estética</span>
+      </div>
+      <div class="flex items-center gap-4 text-sm text-[#7E7A77]">
+        <span class="bg-[#6E8A78]/10 text-[#6E8A78] px-3 py-1 rounded-full text-xs font-semibold">Documentação Oficial v1.0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="lg:col-span-3 lg:sticky lg:top-24 h-fit max-h-[80vh] overflow-y-auto pb-8 pr-2">
+      <nav class="space-y-2">
+        <p class="text-xs font-semibold uppercase tracking-wider text-[#C5A880] mb-4">Navegação</p>
+        <a href="#introducao" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="book-open" class="w-4 h-4"></i> 1. Introdução
+        </a>
+        <a href="#estrutura" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="folder-tree" class="w-4 h-4"></i> 2. Estrutura de Arquivos
+        </a>
+        <a href="#tecnologias" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="cpu" class="w-4 h-4"></i> 3. Tecnologias Utilizadas
+        </a>
+        <a href="#execucao" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="play-circle" class="w-4 h-4"></i> 4. Como Executar
+        </a>
+        <a href="#customizacao" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="sliders" class="w-4 h-4"></i> 5. Como Customizar
+        </a>
+        <a href="#integracao-whatsapp" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> 6. Conectar ao WhatsApp
+        </a>
+        <a href="#deploy" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="globe" class="w-4 h-4"></i> 7. Hospedagem & Deploy
+        </a>
+        <a href="#suporte" class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-[#1E1C1B]/80 hover:bg-[#6E8A78]/10 hover:text-[#6E8A78] transition-all font-medium">
+          <i data-lucide="help-circle" class="w-4 h-4"></i> 8. Suporte & Créditos
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:col-span-9 space-y-12">
+      
+      <!-- Introdução -->
+      <section id="introducao" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="book-open" class="w-6 h-6"></i> 1. Introdução
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-4">
+          O <strong>Aura Estética</strong> é um template estático premium de página única (landing page), responsivo e de alto desempenho, especialmente projetado para clínicas de estética, spas médicos, estúdios de harmonização e profissionais de beleza de luxo.
+        </p>
+        <p class="text-sm text-[#7E7A77] leading-relaxed">
+          Com foco absoluto em conversão de visitantes para agendamentos, o template traz uma paleta de cores sofisticada em tons terra e ouro, tipografia refinada e um <strong>Widget de Agendamento Interativo de 4 etapas</strong> no estilo SPA (Single Page Application) com animações fluidas geradas pela biblioteca GSAP.
+        </p>
+      </section>
+
+      <!-- Estrutura de Arquivos -->
+      <section id="estrutura" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="folder-tree" class="w-6 h-6"></i> 2. Estrutura de Arquivos
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-6">
+          A organização do template é limpa e direta, facilitando a edição e personalização em qualquer IDE.
+        </p>
+        <div class="code-block text-xs leading-relaxed">
+/
+├── index.html           # Estrutura HTML5 semântica principal e tags SEO
+├── style.css            # Estilos CSS complementares (gradients, glassmorphism)
+├── script.js            # Lógica interativa (Widget, FAQ Accordion, GSAP)
+├── readme.txt           # Instruções rápidas do produto
+├── documentation/       # Pasta com a documentação do template
+│   └── index.html       # Esta página de documentação
+└── assets/              # Recursos de imagem e logotipos
+    ├── logo-icon.png    # Ícone do logotipo da clínica
+    ├── hero-clinic.png  # Imagem da seção de boas-vindas
+    ├── treatment-*.png  # Imagens dos tratamentos oferecidos
+    ├── professional-*.png # Fotos da equipe profissional
+    └── avatar-client-*.png # Avatares dos clientes em depoimentos
+        </div>
+      </section>
+
+      <!-- Tecnologias Utilizadas -->
+      <section id="tecnologias" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="cpu" class="w-6 h-6"></i> 3. Tecnologias Utilizadas
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-6">
+          O projeto utiliza tecnologias modernas via CDN para garantir leveza, alta velocidade de carregamento (essencial para SEO local) e fácil hospedagem.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-[#C5A880]/15 p-4 rounded-xl">
+            <span class="font-bold text-sm text-[#1E1C1B] block mb-1">Tailwind CSS (via CDN)</span>
+            <p class="text-xs text-[#7E7A77] leading-relaxed">Framework de estilo utilitário para design responsivo ágil.</p>
+          </div>
+          <div class="border border-[#C5A880]/15 p-4 rounded-xl">
+            <span class="font-bold text-sm text-[#1E1C1B] block mb-1">GSAP & ScrollTrigger</span>
+            <p class="text-xs text-[#7E7A77] leading-relaxed">Motor de animação de alta performance para efeitos ao rolar a página.</p>
+          </div>
+          <div class="border border-[#C5A880]/15 p-4 rounded-xl">
+            <span class="font-bold text-sm text-[#1E1C1B] block mb-1">Lucide Icons</span>
+            <p class="text-xs text-[#7E7A77] leading-relaxed">Conjunto de ícones vetoriais modernos, limpos e totalmente editáveis via CSS.</p>
+          </div>
+          <div class="border border-[#C5A880]/15 p-4 rounded-xl">
+            <span class="font-bold text-sm text-[#1E1C1B] block mb-1">Google Fonts</span>
+            <p class="text-xs text-[#7E7A77] leading-relaxed">Fontes premium: <em>Cinzel</em> para títulos (requinte) e <em>Outfit</em> para textos (alta legibilidade).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como Executar -->
+      <section id="execucao" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="play-circle" class="w-6 h-6"></i> 4. Como Executar o Template
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-4">
+          Como este template é 100% estático, não há necessidade de compiladores, Node.js ou bancos de dados locais.
+        </p>
+        <div class="space-y-4">
+          <div class="p-4 bg-[#FAF7F5] rounded-xl border-l-4 border-[#6E8A78]">
+            <span class="font-bold text-xs uppercase tracking-wider text-[#6E8A78] block mb-1">Execução Simples</span>
+            <p class="text-xs text-[#7E7A77]">Dê dois cliques no arquivo <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded text-red-600">index.html</code> para abri-lo diretamente no Chrome, Firefox, Safari ou Edge.</p>
+          </div>
+          <div class="p-4 bg-[#FAF7F5] rounded-xl border-l-4 border-[#C5A880]">
+            <span class="font-bold text-xs uppercase tracking-wider text-[#C5A880] block mb-1">Servidor de Desenvolvimento (Recomendado)</span>
+            <p class="text-xs text-[#7E7A77] mb-2">Para testar animações GSAP de forma ideal, use a extensão "Live Server" do VS Code ou execute via Python no terminal da pasta do projeto:</p>
+            <code class="bg-[#1E1C1B] text-white p-2 rounded block text-xs font-mono">python -m http.server 8000</code>
+            <p class="text-[11px] text-[#7E7A77] mt-2">Em seguida, acesse <a href="http://localhost:8000" target="_blank" class="underline text-blue-600">http://localhost:8000</a> no navegador.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Como Customizar -->
+      <section id="customizacao" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="sliders" class="w-6 h-6"></i> 5. Como Customizar
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        
+        <div class="space-y-6">
+          <!-- A. Paleta de Cores -->
+          <div>
+            <h3 class="font-bold text-base mb-2 text-[#1E1C1B]">A. Alterar Cores</h3>
+            <p class="text-sm text-[#7E7A77] mb-3 leading-relaxed">
+              O projeto possui cores sofisticadas configuradas diretamente no Tailwind CSS dentro do <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">index.html</code> e variáveis CSS em <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">style.css</code>.
+            </p>
+            <div class="code-block text-xs mb-3">
+/* No index.html, altere em tailwind.config: */
+colors: {
+  sand: {
+    DEFAULT: '#FAF7F5',   // Fundo principal claro
+    dark: '#F4EFEA',      // Fundo secundário
+  },
+  champagne: '#D4AF37',   // Ouro vibrante
+  goldrose: '#C5A880',    // Ouro Rose luxo
+  sage: {
+    DEFAULT: '#6E8A78',   // Verde sálvia relaxante
+  }
+}
+            </div>
+            <p class="text-xs text-[#7E7A77]">
+              Lembre-se de atualizar também os valores hexadecimais no `:root` em <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">style.css</code> para manter o widget e elementos extras sincronizados.
+            </p>
+          </div>
+
+          <!-- B. Especialistas e Serviços -->
+          <div>
+            <h3 class="font-bold text-base mb-2 text-[#1E1C1B]">B. Mudar Serviços e Equipe</h3>
+            <p class="text-sm text-[#7E7A77] mb-2 leading-relaxed">
+              Os tratamentos e especialistas aparecem tanto na landing page quanto nas opções de clique do widget.
+            </p>
+            <ol class="list-decimal pl-5 text-xs text-[#7E7A77] space-y-1">
+              <li>No <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">index.html</code>, altere o atributo <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">data-value</code> nos botões de escolha no Widget de agendamento (Passo 1 e 2).</li>
+              <li>No <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">script.js</code>, altere as tabelas de mapeamento <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">tratamentosNomes</code> e <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">profissionaisNomes</code> nas linhas ~310 a ~323 para que o resumo final exiba as novas descrições corretamente.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conectar ao WhatsApp -->
+      <section id="integracao-whatsapp" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="message-circle" class="w-6 h-6"></i> 6. Conectar o Agendamento ao WhatsApp
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-4">
+          Como este é um template estático, por padrão o Passo 4 mostra apenas uma tela de simulação bem-sucedida. Se você quiser enviar as informações inseridas pelo usuário para o WhatsApp da clínica, adicione o seguinte trecho ao evento do botão de conclusão (<code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">next-step-3</code>) no <code class="bg-[#1E1C1B]/5 px-1 py-0.5 rounded">script.js</code>:
+        </p>
+        
+        <div class="code-block text-xs leading-relaxed mb-4">
+// Substitua o evento click de 'next-step-3' no seu script.js (Linha ~345):
+document.getElementById('next-step-3').addEventListener('click', () => {
+  if (validateStep3()) {
+    bookingState.clientName = inputName.value.trim();
+    bookingState.clientEmail = inputEmail.value.trim();
+    bookingState.clientPhone = inputPhone.value.trim();
+    
+    // Gerar link e abrir WhatsApp
+    const foneClinica = "5521988887777"; // Insira o número completo com DDD (e 55 para Brasil)
+    const mensagem = `Olá! Gostaria de confirmar meu agendamento na Clínica Aura:
+- *Tratamento:* ${bookingState.treatment}
+- *Profissional:* ${bookingState.professional}
+- *Data e Hora:* ${bookingState.date} às ${bookingState.time}
+- *Nome Paciente:* ${bookingState.clientName}
+- *Telefone:* ${bookingState.clientPhone}`;
+
+    const urlWhatsapp = `https://api.whatsapp.com/send?phone=${foneClinica}&text=${encodeURIComponent(mensagem)}`;
+    window.open(urlWhatsapp, '_blank');
+    
+    goToStep(4);
+  }
+});
+        </div>
+        
+        <p class="text-xs text-[#7E7A77]">
+          Dessa forma, após finalizar o formulário, o cliente é direcionado instantaneamente para iniciar a conversa já enviando os dados da reserva.
+        </p>
+      </section>
+
+      <!-- Deploy -->
+      <section id="deploy" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="globe" class="w-6 h-6"></i> 7. Hospedagem & Deploy
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-4">
+          Para publicar o seu site na internet e obter o link de demonstração ao vivo para colocar no Codester, você pode hospedar o template gratuitamente nas seguintes plataformas:
+        </p>
+        <div class="space-y-4 text-xs text-[#7E7A77]">
+          <div class="p-4 border border-[#C5A880]/15 rounded-xl">
+            <span class="font-bold text-[#1E1C1B] block mb-1">GitHub Pages (Fácil & Gratuito)</span>
+            <p class="mb-2">Se você usa o GitHub para versionamento de código, pode publicar em poucos cliques:</p>
+            <ol class="list-decimal pl-5 space-y-1">
+              <li>Crie um repositório público e envie os arquivos do projeto.</li>
+              <li>Acesse <span class="font-semibold">Settings > Pages</span> no seu repositório.</li>
+              <li>Em "Build and deployment", selecione a branch <span class="font-semibold">main</span> e a pasta <span class="font-semibold">/ (root)</span>.</li>
+              <li>Clique em salvar. Em instantes o site estará online no link fornecido.</li>
+            </ol>
+          </div>
+          <div class="p-4 border border-[#C5A880]/15 rounded-xl">
+            <span class="font-bold text-[#1E1C1B] block mb-1">Vercel ou Netlify (Arrastar e Soltar)</span>
+            <p>Se você não utiliza terminal ou Git, basta arrastar a pasta do projeto diretamente nas telas dessas plataformas para gerar um link de produção instantaneamente com certificado SSL de graça.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Suporte e Créditos -->
+      <section id="suporte" class="bg-white rounded-2xl p-8 border border-[#C5A880]/15 shadow-sm scroll-mt-24">
+        <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 text-[#6E8A78]">
+          <i data-lucide="help-circle" class="w-6 h-6"></i> 8. Suporte & Créditos
+        </h2>
+        <div class="h-0.5 w-12 bg-[#C5A880] mb-6"></div>
+        <p class="text-sm text-[#7E7A77] leading-relaxed mb-4">
+          Este template foi desenvolvido de acordo com as diretrizes do Codester para venda de códigos-fonte prontos e templates de luxo.
+        </p>
+        <ul class="list-disc pl-5 text-xs text-[#7E7A77] space-y-2 leading-relaxed">
+          <li><strong>Imagens:</strong> As fotos de demonstração em `/assets` são de alta resolução e adequadas para o nicho de beleza estética e medicina integrativa, livres de royalties para demonstração.</li>
+          <li><strong>Biblioteca Lucide Icons:</strong> Ícones carregados dinamicamente via CDN oficial. Veja mais em <a href="https://lucide.dev" target="_blank" class="underline text-blue-600">lucide.dev</a>.</li>
+          <li><strong>Animações:</strong> As transições e efeitos ScrollTrigger usam o GSAP. Para personalizar a suavidade ou os tempos de resposta, acesse <a href="https://greensock.com" target="_blank" class="underline text-blue-600">greensock.com</a>.</li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1E1C1B] text-[#F4EFEA]/60 text-center py-8 text-xs border-t border-[#C5A880]/20">
+    <p>&copy; 2026 Aura Estética. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
